@@ -1,3 +1,4 @@
+app = "bot-telegram-zie"
 primary_region = "ams"
 
 [processes]
@@ -10,7 +11,10 @@ primary_region = "ams"
   auto_start_machines = false
   min_machines_running = 1
 
+[[restart]]
+  policy = "always"
+  processes = ["app"]
+
 [[vm]]
   size = "shared-cpu-1x"
   memory = "512mb"
-
