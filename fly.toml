@@ -3,6 +3,14 @@ primary_region = "ams"
 [processes]
   app = "python bot.py"
 
+[http_service]
+  internal_port = 8080
+  processes = ["app"]
+  auto_stop_machines = false
+  auto_start_machines = false
+  min_machines_running = 1
+
 [[vm]]
   size = "shared-cpu-1x"
   memory = "512mb"
+
